@@ -1,0 +1,177 @@
+/* src/App.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+:root {
+  --primary: #003566;
+  --accent: #ffc300;
+  --bg: #f0f2f5;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--bg);
+  color: #1a1a1a;
+}
+
+/* Навігація */
+nav {
+  background: var(--primary);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Контейнер */
+.content-wrapper {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Картки та секції */
+.section-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: var(--accent);
+}
+
+p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Сітка пам'яток */
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.attraction-card {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 15px;
+  border-bottom: 5px solid var(--accent);
+  transition: 0.3s;
+}
+
+.attraction-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.img-main {
+  width: 100%;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.fact-badge {
+  display: inline-block;
+  background: #e1ecf7;
+  color: var(--primary);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* Стилі для галереї */
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.gallery-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.gallery-item:last-child {
+  border-bottom: none;
+}
+
+.img-main {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  background-color: #ddd; /* колір поки фото вантажиться */
+}
+
+.img-caption {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.img-caption h3 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+
+.img-caption p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  color: #666;
+}
