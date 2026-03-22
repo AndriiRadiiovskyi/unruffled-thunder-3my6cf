@@ -7,6 +7,8 @@ import MainAttraction from "./components/MainAttraction";
 import OtherAttractions from "./components/OtherAttractions";
 import Gallery from "./components/Gallery";
 import FeedbackForm from "./components/Feedback";
+// Додайте імпорт зверху
+import Infrastructure from "./components/Infrastructure";
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Link to="/other-attractions">Цікаві місця</Link>
         <Link to="/gallery">Галерея</Link>
         <Link to="/feedback">Відгук</Link>
+        <Link to="/infrastructure">Освіта</Link>
       </nav>
 
       <div className="content-container">
@@ -26,6 +29,7 @@ function App() {
           <Route path="/other-attractions" element={<OtherAttractions />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/feedback" element={<FeedbackForm />} />
+          <Route path="/infrastructure" element={<Infrastructure />} />
         </Routes>
       </div>
     </Router>
